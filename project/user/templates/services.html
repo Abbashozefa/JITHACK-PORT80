@@ -1,0 +1,335 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eltern</title>
+    <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/service.css' %}" />
+    <script
+      src="https://kit.fontawesome.com/3821dd7e5c.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav
+      class="navbar navbar-dark navbar-expand-lg"
+      style="background-color: rgb(182, 50, 50)"
+    >
+      <!-- navbar-dark navbar-expand-lg bg-dark -->
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"
+          ><i class="fa-solid fa-person-breastfeeding"></i> ELtern
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="http://127.0.0.1:8000/services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://127.0.0.1:8000/aboutus">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://127.0.0.1:8000/contact">Contact-Us</a>
+            </li>
+            <li>
+              <!-- <i class="fa-solid fa-user" style="
+                height: 50px;
+                width:30px;
+                 position: absolute;
+                 right: 120px;
+               "></i> -->
+              <button
+                type="button"
+                class="btn btn-secondary"
+                style="
+                  background-color: #503232;
+                  /* width: 30px;
+                  height: 30px;
+                  border-radius: 10px; */
+                  position: absolute;
+                  right: 120px;
+                "
+              >
+                <i class="fa-solid fa-user"></i>
+              </button>
+            </li>
+
+            <li>
+              <button
+                type="button"
+                class="btn btn-danger"
+                style="position: absolute; right: 30px"
+              >
+                <a
+                  href="Authentication.html"
+                  class="btn-link"
+                  style="color: white"
+                >
+                  Log-out</a
+                >
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section id="what-we-do">
+      <div class="container-fluid">
+        <h2 class="section-title mb-2 h1">What we do</h2>
+        <p class="text-center text-muted h5">
+          We end the tiredsome lonely life of our elder citizens.
+        </p>
+        <div class="row mt-5">
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+            <div class="card">
+              <div class="card-block">
+                <div class="rutvik fa-beat">
+                  <i class="fa fa-ambulance" style="font-size: 36px"></i>
+                </div>
+
+                <h3 class="card-title">Medic support</h3>
+                <p class="card-text">
+                  With supporting text below as a natural lead-in to additional
+                  content.
+                </p>
+                <a
+                  href="https://www.fiverr.com/share/qb8D02"
+                  title="Read more"
+                  class="read-more"
+                  >Read more<i class="fa fa-angle-double-right ml-2"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+            <div class="card">
+              <div class="card-block">
+                <div class="rutvik fa-beat">
+                  <i class="fas fa-burn" style="font-size: 36px"></i>
+                </div>
+                <h3 class="card-title">Blood Checkup</h3>
+                <p class="card-text">
+                  With supporting text below as a natural lead-in to additional
+                  content.
+                </p>
+                <a
+                  href="https://www.fiverr.com/share/qb8D02"
+                  title="Read more"
+                  class="read-more"
+                  >Read more<i class="fa fa-angle-double-right ml-2"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+            <div class="card">
+              <div class="card-block">
+                <div class="rutvik fa-beat">
+                  <i class="fas fa-hamburger" style="font-size: 36px"></i>
+                </div>
+                <h3 class="card-title">Food support</h3>
+                <p class="card-text">
+                  With supporting text below as a natural lead-in to additional
+                  content.
+                </p>
+                <a
+                  href="https://www.fiverr.com/share/qb8D02"
+                  title="Read more"
+                  class="read-more"
+                  >Read more<i class="fa fa-angle-double-right ml-2"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+            <div class="card">
+              <div class="card-block">
+                <div class="rutvik fa-beat">
+                  <i class="fas fa-house-user" style="font-size: 36px"></i>
+                </div>
+                <h3 class="card-title">Household support</h3>
+                <p class="card-text">
+                  With supporting text below as a natural lead-in to additional
+                  content.
+                </p>
+                <a
+                  href="https://www.fiverr.com/share/qb8D02"
+                  title="Read more"
+                  class="read-more"
+                  >Read more<i class="fa fa-angle-double-right ml-2"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+            <div class="card">
+              <div class="card-block">
+                <div class="rutvik fa-beat">
+                  <i class="fas fa-bus" style="font-size: 36px"></i>
+                </div>
+                <h3 class="card-title">Travelling support</h3>
+                <p class="card-text">
+                  With supporting text below as a natural lead-in to additional
+                  content.
+                </p>
+                <a
+                  href="https://www.fiverr.com/share/qb8D02"
+                  title="Read more"
+                  class="read-more"
+                  >Read more<i class="fa fa-angle-double-right ml-2"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+            <div class="card">
+              <div class="card-block">
+                <div class="rutvik fa-beat">
+                  <i class="fas fa-diagnoses" style="font-size: 36px"></i>
+                </div>
+                <h3 class="card-title">Emergency support</h3>
+                <p class="card-text">
+                  With supporting text below as a natural lead-in to additional
+                  content.
+                </p>
+                <a
+                  href="https://www.fiverr.com/share/qb8D02"
+                  title="Read more"
+                  class="read-more"
+                  >Read more<i class="fa fa-angle-double-right ml-2"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>About</h6>
+            <p class="text-justify">
+              Hello there!! We welcome you to our cruise to helping senile part
+              of our society. Port 80's brings you a beautiful platform to help
+              your senile parents/grandparents with the help of various services
+              that we provide. We can help them with all the basic necessities
+              of life that has become tiredsome for them now. Feel free to
+              explore our services and we'll be glad to bring a joysome smile on
+              their as they deserve it.
+            </p>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Categories</h6>
+            <ul class="footer-links">
+              <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
+              <li>
+                <a href="http://scanfcode.com/category/front-end-development/"
+                  >UI Design</a
+                >
+              </li>
+              <li>
+                <a href="http://scanfcode.com/category/back-end-development/"
+                  >PHP</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://scanfcode.com/category/java-programming-language/"
+                  >Java</a
+                >
+              </li>
+              <li>
+                <a href="http://scanfcode.com/category/android/">Android</a>
+              </li>
+              <li>
+                <a href="http://scanfcode.com/category/templates/">Templates</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Quick Links</h6>
+            <ul class="footer-links">
+              <li><a href="http://scanfcode.com/about/">About Us</a></li>
+              <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+              <li>
+                <a href="http://scanfcode.com/contribute-at-scanfcode/"
+                  >Contribute</a
+                >
+              </li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="Authentication.html">Sitemap</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">
+              Copyright &copy; 2022 All Rights Reserved by
+              <a href="#">Port 80's</a>.
+            </p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li>
+                <a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
+              </li>
+              <li>
+                <a class="twitter" href="#"
+                  ><i class="fa-brands fa-twitter"></i
+                ></a>
+              </li>
+              <li>
+                <a class="dribbble" href="#"><i class="fa fa-github"></i></a>
+              </li>
+              <li>
+                <a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
