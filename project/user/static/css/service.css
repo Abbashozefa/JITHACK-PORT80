@@ -250,3 +250,10 @@ section .section-title{
     font-weight:600
   }
 }
+a{
+  text-decoration: none;
+}
+.btn-link{
+  text-decoration: none;
+  color:antiquewhite;
+}

@@ -16,8 +16,6 @@ urlpatterns = [
     path('services/', views.services),
     path('aboutus/', views.about),
     path('serviceform/', views.serviceform),
-    
+    path('donation/', views.donation),    
 
-
-    
 ]

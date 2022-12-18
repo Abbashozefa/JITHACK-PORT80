@@ -19,7 +19,7 @@
     ></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     
-    <link rel="stylesheet" href="{% static 'css/style.css'}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     
   </head>
   <body>
@@ -52,24 +52,13 @@
               <a class="nav-link" href="http://127.0.0.1:8000/services/">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="About/">About us</a>
+              <a class="nav-link" href="http://127.0.0.1:8000/aboutus">About us</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="http://127.0.0.1:8000/contact">Contact-Us</a>
             </li>
             {% if user.is_authenticated %}
-            <li><a href="{% url "logout" %}"><span class="glyphicon glyphicon-log-out"></span> &nbsp; Logout</a></li>
-            {% else %}
-            <li><a href="{% url "register" %}"><span class="glyphicon glyphicon-user"></span> &nbsp; Sign up</a></li>
-            <li><a href="{% url "login" %}"><span class="glyphicon glyphicon-log-in"></span> &nbsp; Log in</a></li>
-            {% endif %}
             <li>
-              <!-- <i class="fa-solid fa-user" style="
-                height: 50px;
-                width:30px;
-                 position: absolute;
-                 right: 120px;
-               "></i> -->
               <button
                 type="button"
                 class="btn btn-secondary"
@@ -85,6 +74,12 @@
                 <i class="fa-solid fa-user"></i>
               </button>
             </li>
+            <li ><button type="button" class="btn btn-danger" style="position:absolute; right:30px;"><a href="{% url "logout" %}" class="btn-link"> &nbsp; Logout</a></button></li>
+            {% else %}
+            <li ><button type="button" class="btn btn-danger" style="position:absolute; right:30px;"><a href="{% url "register" %}"  class="btn-link"> &nbsp; Sign up</a></button></li>
+            <li ><button type="button" class="btn btn-danger" style="position:absolute; right:125px;"><a href="{% url "login" %}" class="btn-link">&nbsp; Log in</a></button></li>
+            {% endif %}
+            
             
 
             
@@ -92,6 +87,65 @@
         </div>
       </div>
     </nav>
+    <!-- navbar end  -->
+    <div class="middle-container">
+      <div class="skills" style="margin-top: 100px">
+        <div class="skill-row">
+          <img class="web" src="{% static 'Images/DSC00649-1-scaled.jpg' %}" alt="" />
+          <h3>Don't worry</h3>
+          <p>
+            If you live <strong>far</strong> from your parents and worry for
+            them, Then you are at the right place
+          </p>
+        </div>
+        <div class="skill-row">
+          <img class="web" src="{% static '/images/Old-Age-Home-870x600.jpg' %}" alt="" />
+          <h3>Be the best Son/Daughter</h3>
+          <p>
+            You need not to worry anymore, Eltern bring you all the help to help
+            your elderly on your behalf.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- main end  -->
+    <!-- features start -->
+    <section class="white-section" id="features">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="feature-box col-lg-4">
+            <!-- icon is a custom class here -->
+            <i
+              class="icon fas fa-check-circle fa-4x fa-flip"
+              style="--fa-animation-duration: 3s"
+            ></i>
+            <h3 class="feature-title">Easy to use</h3>
+            <p>So easy to use, even your parents could do it.</p>
+          </div>
+
+          <div class="feature-box col-lg-4">
+            <!-- icon is a custom class here -->
+            <i
+              class="icon fas fa-bullseye fa-4x fa-flip"
+              style="--fa-animation-duration: 3s"
+            ></i>
+            <h3 class="feature-title">Elite Clientele</h3>
+            <p>We have an army of elite volunteers at your service.</p>
+          </div>
+
+          <div class="feature-box col-lg-4">
+            <!-- icon is a custom class here -->
+            <i
+              class="icon fas fa-heart fa-4x fa-flip"
+              style="--fa-animation-duration: 3s"
+            ></i>
+            <h3 class="feature-title">Guaranteed to work</h3>
+            <p>You'll find this service convenient or your money back.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- features end -->
     <!-- footer -->
     <!-- Site footer -->
     <footer class="site-footer">
@@ -100,35 +154,34 @@
           <div class="col-sm-12 col-md-6">
             <h6>About</h6>
             <p class="text-justify">
-              Hello there!! We welcome you to our cruise to helping senile part of our society. Port 80's brings you a beautiful platform to help your senile parents/grandparents with the help of various services that we provide. We can help them with all the basic necessities of life that has become tiredsome for them now. Feel free to explore our services and we'll be glad to bring a joysome smile on their as they deserve it.
+              Hello there!! We welcome you to our cruise to helping senile part
+              of our society. Port 80's brings you a beautiful platform to help
+              your senile parents/grandparents with the help of various services
+              that we provide. We can help them with all the basic necessities
+              of life that has become tiredsome for them now. Feel free to
+              explore our services and we'll be glad to bring a joysome smile on
+              their as they deserve it.
             </p>
           </div>
 
           <div class="col-xs-6 col-md-3">
-            <h6>Categories</h6>
+            <h6>Services</h6>
             <ul class="footer-links">
-              <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
+              <li>Medic Support</li>
               <li>
-                <a href="http://scanfcode.com/category/front-end-development/"
-                  >UI Design</a
-                >
+                Blood Checkup
               </li>
               <li>
-                <a href="http://scanfcode.com/category/back-end-development/"
-                  >PHP</a
-                >
+                Food Support
               </li>
               <li>
-                <a
-                  href="http://scanfcode.com/category/java-programming-language/"
-                  >Java</a
-                >
+                Household Support
               </li>
               <li>
-                <a href="http://scanfcode.com/category/android/">Android</a>
+                Travelling Support
               </li>
               <li>
-                <a href="http://scanfcode.com/category/templates/">Templates</a>
+                Emergency Support
               </li>
             </ul>
           </div>
@@ -136,15 +189,12 @@
           <div class="col-xs-6 col-md-3">
             <h6>Quick Links</h6>
             <ul class="footer-links">
-              <li><a href="http://scanfcode.com/about/">About Us</a></li>
-              <li><a href="Contact.html">Contact Us</a></li>
+              <li><a href="http://127.0.0.1:8000/aboutus">About Us</a></li>
+              <li><a href="http://127.0.0.1:8000/contact">Contact Us</a></li>
               <li>
-                <a href="http://scanfcode.com/contribute-at-scanfcode/"
-                  >Contribute</a
-                >
+                <a href="http://127.0.0.1:8000/donation">Contribute</a>
               </li>
               <li><a href="#">Privacy Policy</a></li>
-              <li><a href="Landing.html">Sitemap</a></li>
             </ul>
           </div>
         </div>
@@ -188,3 +238,5 @@
     ></script>
   </body>
 </html>
+
+    

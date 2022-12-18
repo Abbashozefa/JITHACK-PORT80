@@ -166,3 +166,69 @@
     font-weight:600
   }
 }
+
+
+h1{  
+  color: #66BFBF;
+  margin: 50px auto 0 auto;
+  font-family: 'Sacramento', cursive;
+  font-size: 5.65rem;
+  }
+.heading{
+line-height: 2;
+}        
+.detail{
+margin: 0 auto 0 auto;
+font-size: 2.5rem;
+font-weight: normal;
+}        
+h3{
+  color: #11999E;
+  font-family: 'Montserrat', sans-serif;
+
+}
+.web{
+  height: auto;
+  width:40%;
+  float: left;
+margin-right:30px;
+margin-bottom: 20px;
+border: solid 2px #000;
+border-radius: 20px;
+box-shadow: 5px 20px 50px #000;
+
+}
+.badge{
+  height: auto;
+  width:25%;
+  float: right;
+  margin-right:30px;
+border: solid 10px #11999E;
+}
+.footer-link{
+ color:#11999E;
+}
+.skill-row{
+width: 50%;
+margin:50px auto 160px auto;
+text-align: right;
+line-height: 2;
+
+/* box-shadow: 5px 20px 50px #000; */
+}   
+.icon{
+  color:rgb(182, 50, 50);
+  margin-bottom: 10px;
+  position: relative;
+  left:50px;
+
+}
+.white-section{
+  margin-top:20px;
+  margin-bottom: 30px;
+  margin-left: 10px;
+}
+a{
+  text-decoration: none;
+}
+

@@ -16,6 +16,7 @@ from django.template.loader import get_template
 from .models import ContactForm,ServiceForm
 
 
+
 import requests
 
 # Create your views here.
@@ -32,23 +33,28 @@ def contact(request):
 		
 	return render(request, 'Contact.html')
 def services(request):
+	if (request.method == 'POST'):
+		post=ServiceForm
+		post.cname=request.POST['cname']
+		post.cemail=request.POST['cemail']
+		post.ccontact=request.POST['ccontact']
+		post.cdate=request.POST['cdate']
+		post.clocation=request.POST['clocation']
+		post.cservice=request.POST['cservice']				
+		post.save()
+		return render(request, 'services.html')
+	else:
+		return render(request, 'services.html')
 	
 	return render(request, 'services.html')
 def about(request):
 	return render(request, 'About.html')
-def serviceform(request):
-	if (request.method == 'POST'):
-		name=request.POST.get('name')
-		email=request.POST.get('email')
-		contact=request.POST.get('contact')
-		date=request.POST.get('date')
-		location=request.POST.get('location')
-		service=request.POST.get('service')
-		form=ServiceForm(name=name,email=email,contact=contact,date=date,location=location,service=service)
-		form.save()
-		
-
-	return render(request,'forms.html')
+def donation(request):
+	return render(request,'donation.html')
+def serviceform(request):	 
+    #if request.method == "POST":  
+    #    fullname=  
+    return render(request,'forms.html')
 
 #def emp(request):  
 #    if request.method == "POST":  

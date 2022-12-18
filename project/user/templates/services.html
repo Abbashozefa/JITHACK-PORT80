@@ -52,7 +52,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+              <a class="nav-link" aria-current="page" href="http://127.0.0.1:8000/">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link active" href="http://127.0.0.1:8000/services">Services</a>
@@ -63,13 +63,11 @@
             <li class="nav-item">
               <a class="nav-link" href="http://127.0.0.1:8000/contact">Contact-Us</a>
             </li>
+            
+              
+
+            {% if user.is_authenticated %}        
             <li>
-              <!-- <i class="fa-solid fa-user" style="
-                height: 50px;
-                width:30px;
-                 position: absolute;
-                 right: 120px;
-               "></i> -->
               <button
                 type="button"
                 class="btn btn-secondary"
@@ -84,23 +82,12 @@
               >
                 <i class="fa-solid fa-user"></i>
               </button>
-            </li>
-
-            <li>
-              <button
-                type="button"
-                class="btn btn-danger"
-                style="position: absolute; right: 30px"
-              >
-                <a
-                  href="Authentication.html"
-                  class="btn-link"
-                  style="color: white"
-                >
-                  Log-out</a
-                >
-              </button>
-            </li>
+            </li>    
+            <li ><button type="button" class="btn btn-danger" style="position:absolute; right:30px;"><a href="{% url "logout" %}" class="btn-link" style="color: whitesmoke; text-decoration: none;"> &nbsp; Logout</a></button></li>
+            {% else %}
+            <li ><button type="button" class="btn btn-danger" style="position:absolute; right:30px;"><a href="{% url "register" %}"  class="btn-link" style="color: whitesmoke; text-decoration: none;"> &nbsp; Sign up</a></button></li>
+            <li ><button type="button" class="btn btn-danger" style="position:absolute; right:125px;"><a href="{% url "login" %}" class="btn-link" style="color: whitesmoke; text-decoration: none;">&nbsp; Log in</a></button></li>
+            {% endif %}
           </ul>
         </div>
       </div>
@@ -121,14 +108,13 @@
 
                 <h3 class="card-title">Medic support</h3>
                 <p class="card-text">
-                  With supporting text below as a natural lead-in to additional
-                  content.
+                  All the medical support available.
                 </p>
                 <a
-                  href="https://www.fiverr.com/share/qb8D02"
+                  href="http://127.0.0.1:8000/serviceform/"
                   title="Read more"
                   class="read-more"
-                  >Read more<i class="fa fa-angle-double-right ml-2"></i
+                  >Book an appointment<i class="fa fa-angle-double-right ml-2"></i
                 ></a>
               </div>
             </div>
@@ -141,14 +127,13 @@
                 </div>
                 <h3 class="card-title">Blood Checkup</h3>
                 <p class="card-text">
-                  With supporting text below as a natural lead-in to additional
-                  content.
+                  Get their blood report in a very convenient way.
                 </p>
                 <a
-                  href="https://www.fiverr.com/share/qb8D02"
+                  href="http://127.0.0.1:8000/serviceform/"
                   title="Read more"
                   class="read-more"
-                  >Read more<i class="fa fa-angle-double-right ml-2"></i
+                  >Book an appointment<i class="fa fa-angle-double-right ml-2"></i
                 ></a>
               </div>
             </div>
@@ -161,14 +146,13 @@
                 </div>
                 <h3 class="card-title">Food support</h3>
                 <p class="card-text">
-                  With supporting text below as a natural lead-in to additional
-                  content.
+                  Get the groceries on your table without visiting the store.
                 </p>
                 <a
-                  href="https://www.fiverr.com/share/qb8D02"
+                  href="http://127.0.0.1:8000/serviceform/"
                   title="Read more"
                   class="read-more"
-                  >Read more<i class="fa fa-angle-double-right ml-2"></i
+                  >Book an appointment<i class="fa fa-angle-double-right ml-2"></i
                 ></a>
               </div>
             </div>
@@ -183,14 +167,13 @@
                 </div>
                 <h3 class="card-title">Household support</h3>
                 <p class="card-text">
-                  With supporting text below as a natural lead-in to additional
-                  content.
+                 Repair or fix your Household easily..
                 </p>
                 <a
-                  href="https://www.fiverr.com/share/qb8D02"
+                  href="http://127.0.0.1:8000/serviceform/"
                   title="Read more"
                   class="read-more"
-                  >Read more<i class="fa fa-angle-double-right ml-2"></i
+                  >Book an appointment<i class="fa fa-angle-double-right ml-2"></i
                 ></a>
               </div>
             </div>
@@ -203,14 +186,13 @@
                 </div>
                 <h3 class="card-title">Travelling support</h3>
                 <p class="card-text">
-                  With supporting text below as a natural lead-in to additional
-                  content.
+                 We make sure you reach your desired destination without any trouble.
                 </p>
                 <a
-                  href="https://www.fiverr.com/share/qb8D02"
+                  href="http://127.0.0.1:8000/serviceform/"
                   title="Read more"
                   class="read-more"
-                  >Read more<i class="fa fa-angle-double-right ml-2"></i
+                  >Book an appointment<i class="fa fa-angle-double-right ml-2"></i
                 ></a>
               </div>
             </div>
@@ -223,14 +205,13 @@
                 </div>
                 <h3 class="card-title">Emergency support</h3>
                 <p class="card-text">
-                  With supporting text below as a natural lead-in to additional
-                  content.
+                 Make us your priority at the time of emergency.
                 </p>
                 <a
-                  href="https://www.fiverr.com/share/qb8D02"
+                  href="http://127.0.0.1:8000/serviceform/"
                   title="Read more"
                   class="read-more"
-                  >Read more<i class="fa fa-angle-double-right ml-2"></i
+                  >Book an appointment<i class="fa fa-angle-double-right ml-2"></i
                 ></a>
               </div>
             </div>
@@ -238,7 +219,6 @@
         </div>
       </div>
     </section>
-
     <footer class="site-footer">
       <div class="container">
         <div class="row">
@@ -256,30 +236,23 @@
           </div>
 
           <div class="col-xs-6 col-md-3">
-            <h6>Categories</h6>
+            <h6>Services</h6>
             <ul class="footer-links">
-              <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
+              <li>Medic Support</li>
               <li>
-                <a href="http://scanfcode.com/category/front-end-development/"
-                  >UI Design</a
-                >
+                Blood Checkup
               </li>
               <li>
-                <a href="http://scanfcode.com/category/back-end-development/"
-                  >PHP</a
-                >
+                Food Support
               </li>
               <li>
-                <a
-                  href="http://scanfcode.com/category/java-programming-language/"
-                  >Java</a
-                >
+                Household Support
               </li>
               <li>
-                <a href="http://scanfcode.com/category/android/">Android</a>
+                Travelling Support
               </li>
               <li>
-                <a href="http://scanfcode.com/category/templates/">Templates</a>
+                Emergency Support
               </li>
             </ul>
           </div>
@@ -287,17 +260,16 @@
           <div class="col-xs-6 col-md-3">
             <h6>Quick Links</h6>
             <ul class="footer-links">
-              <li><a href="http://scanfcode.com/about/">About Us</a></li>
-              <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+              <li><a href="http://127.0.0.1:8000/aboutus">About Us</a></li>
+              <li><a href="http://127.0.0.1:8000/contact">Contact Us</a></li>
               <li>
-                <a href="http://scanfcode.com/contribute-at-scanfcode/"
+                <a href="http://127.0.0.1:8000/donation"
                   >Contribute</a
                 >
               </li>
               <li><a href="#">Privacy Policy</a></li>
-              <li><a href="Authentication.html">Sitemap</a></li>
             </ul>
-          </div>
+          </div> 
         </div>
         <hr />
       </div>
