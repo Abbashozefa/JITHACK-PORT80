@@ -136,5 +136,6 @@ def Login(request):
 			return redirect('index')
 		else:
 			messages.info(request, f'account done not exit plz sign in')
+			return redirect('login')
 	form = AuthenticationForm()
 	return render(request, 'user/login.html', {'form':form, 'title':'log in'})
